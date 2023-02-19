@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/nav.css')}}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <div class="menu">
+                <li><a href="http://127.0.0.1:5000">Home</a></li>
+                <li><a href="/register">Register</a></li>
+            </div>
+        </ul>            
+    </nav>
+    <h1>Register</h1>
+    <p>Use the following form to register for a student organization.</p>
+        <form action="/" method="POST">
+            <p>name:</p>
+            <input type="text" name="name" id="name">
+            <p>organization:</p>
+            <select name="organization" id="organization">
+                <option vlaue="Chess club">Chess club</option>
+                <option vlaue="Flag Football">Flag Football</option>
+                <option vlaue="Band">Band</option>
+                <option vlaue="Charolotte Hack">Charlotte Hack</option>
+                <option vlaue="Code9">Code9</option>
+            </select>
+            <input type="submit" value="Register">
+        </form>
+</body>
+</html>

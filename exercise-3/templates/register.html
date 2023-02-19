@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/nav.css')}}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <div class="menu">
+                <li><a href="http://127.0.0.1:5000">Home</a></li>
+                <li><a href="/register">Register</a></li>
+            </div>
+        </ul>            
+    </nav>
+    <h1>Registered Students</h1>
+    <p>The following students have registered for student organizations.</p>
+    <div class="content">
+        <table style="border: 1px solid rgb(8, 7, 7)">
+            <tr>
+                <th>Name</th>
+                <th>Organization</th>
+            </tr>
+            <tr>
+                {% for entry in entrys %}
+                <tr>
+                    <td> {{entry.Name}}</td>
+                    <td> {{entry.Organization}}</td>
+                </tr>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
